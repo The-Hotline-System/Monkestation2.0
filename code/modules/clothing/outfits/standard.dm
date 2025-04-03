@@ -272,16 +272,6 @@
 	back = /obj/item/mod/control/pre_equipped/corporate
 	internals_slot = ITEM_SLOT_SUITSTORE
 
-/datum/outfit/centcom/admiral/mod
-	name = "CentCom Admiral (MODsuit)"
-
-	suit_store = /obj/item/tank/internals/oxygen
-	suit = null
-	head = null
-	mask = /obj/item/clothing/mask/gas/sechailer
-	back = /obj/item/mod/control/pre_equipped/corporate
-	internals_slot = ITEM_SLOT_SUITSTORE
-
 
 /datum/outfit/ghost_cultist
 	name = "Cultist Ghost"
