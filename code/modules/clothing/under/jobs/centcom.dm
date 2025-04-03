@@ -73,4 +73,3 @@
 	name = "tactical engineering uniform"
 	desc = "A dark colored uniform worn by CentCom's regular military engineers."
 	icon_state = "military_eng"
-
