@@ -311,4 +311,3 @@
 	desc = "Traditional wide-brimmed straw hat."
 	worn_icon = 'icons/mob/clothing/head/straw.dmi'
 	icon_state = "straw_hat"
-
