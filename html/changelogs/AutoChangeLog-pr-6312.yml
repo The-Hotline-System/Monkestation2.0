@@ -1,0 +1,4 @@
+author: "BingusSS13"
+delete-after: True
+changes:
+  - admin: "Using \"Make Human\" in the player panel will now apply quirks and loadout."
