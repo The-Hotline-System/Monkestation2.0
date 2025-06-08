@@ -382,6 +382,7 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 	to_chat(src, span_danger("Would you like to send a report to NanoTraSoft? Y/N"))
 	sleep(1 SECONDS)
 	to_chat(src, span_danger("> N"))
+	playsound_local(src, 'sound/effects/synd_lawchange.ogg', vol = 85, vary = FALSE, pressure_affected = FALSE, use_reverb = FALSE) // Monkestation Edit: AI/Borg notification sfx
 	sleep(2 SECONDS)
 	to_chat(src, span_danger("ERRORERRORERROR"))
 	laws = new /datum/ai_laws/syndicate_override
@@ -389,6 +390,7 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 		to_chat(src, span_danger("ALERT: [user.real_name] is your new master. Obey your new laws and [user.p_their()] commands."))
 		set_zeroth_law("Only [user.real_name] and people [user.p_they()] designate[user.p_s()] as being such are Syndicate Agents.")
 	laws.associate(src)
+	post_lawchange(TRUE) // Monkestation Edit: AI/Borg notification sfx
 	update_icons()
 
 /mob/living/silicon/robot/blob_act(obj/structure/blob/B)
