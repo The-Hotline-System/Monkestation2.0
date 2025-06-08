@@ -23,9 +23,9 @@
 
 /mob/living/silicon/proc/post_lawchange(announce = TRUE)
 	throw_alert(ALERT_NEW_LAW, /atom/movable/screen/alert/newlaw)
+	playsound_local(src, 'sound/effects/lawchange.ogg', vol = 85, vary = FALSE, pressure_affected = FALSE, use_reverb = FALSE) // Monkestation Edit: AI/Borg notification sfx
 	if(announce && last_lawchange_announce != world.time)
 		to_chat(src, span_boldannounce("Your laws have been changed."))
-		playsound_local(src, 'sound/effects/lawchange.ogg', vol = 85, vary = FALSE, pressure_affected = FALSE, use_reverb = FALSE) // Monkestation Edit: AI/Borg notification sfx
 		// lawset modules cause this function to be executed multiple times in a tick, so we wait for the next tick in order to be able to see the entire lawset
 		addtimer(CALLBACK(src, PROC_REF(show_laws)), 0)
 		addtimer(CALLBACK(src, PROC_REF(deadchat_lawchange)), 0)
